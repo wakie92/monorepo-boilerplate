@@ -1,28 +1,139 @@
-## Getting Started
+# Front-end Boilerplate
 
-First, run the development server:
+This repository contains the base boilerplate which we are going to use as a base to start most of
+the company front-end project. The motivation is to have a set of tools already configured in order
+to be able to start right away in a consistent manner. There is going to be changes and updates
+along the way so keep posted! :)
 
-```bash
-yarn dev
+This boilerplate is made using [NextJS](https://nextjs.org/), and is coming with the following
+packages pre-installed and pre-configured:
+
+- [React](https://reactjs.org/) _JavaScript library for creating user interfaces_
+- [Typescript](https://www.typescriptlang.org/) _TypeScript is JavaScript with syntax for types_
+- [Jotai](https://jotai.org/) _Primitive and flexible state management for React_
+- [Axios](https://github.com/axios/axios) _Promise based HTTP client for the browser and node.js_
+- [React-Query](https://tanstack.com/query/latest) _Powerful asynchronous state management for
+  TS/JS, React, Solid, Vue and Svelte._
+- [Eslint](https://eslint.org/) _Tool for identifying and reporting on patterns found in
+  ECMAScript/JavaScript code_
+- [Stylelint](https://stylelint.io/) _A mighty, modern linter that helps you avoid errors and
+  enforce conventions in your styles._
+- [Prettier](https://prettier.io/) _Prettier is an opinionated code formatter_
+- [styled-components](https://styled-components.com/) _Visual primitives for the component age. Use
+  the best bits of ES6 and CSS to style your apps without stress_
+- [Vercel](https://vercel.com/) _Vercel is the platform for frontend developers, providing the speed
+  and reliability innovators need to create at the moment of inspiration._
+
+[Notes]: Comes with prebuild localization support (defaulted to en/ko) and dark/ligth mode support
+ready. Recommanded NodeJS version:
+
+- for local dev `v20.9.0`
+
+## Contents
+
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Development Workflow](#development-workflow)
+
+### Requirements
+
+You need to have `pnpm` installed. Recommand using [n](https://github.com/tj/n) to manage node
+version more easely. Node version recommanded: v20.9.0
+
+```sh
+brew install pnpm
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+For deployment you will need a AWS account. [Vercel](https://vercel.com/) is used for CI/CD.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Installation
 
-To create [API routes](https://nextjs.org/docs/app/building-your-application/routing/router-handlers) add an `api/` directory to the `app/` directory with a `route.ts` file. For individual endpoints, create a subfolder in the `api` directory, like `api/hello/route.ts` would map to [http://localhost:3000/api/hello](http://localhost:3000/api/hello).
+> This repository can be used as a template
 
-## Learn More
+First clone the repository, then install the dependencies:
 
-To learn more about Next.js, take a look at the following resources:
+```sh
+# With pnpm
+pnpm install
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn/foundations/about-nextjs) - an interactive Next.js tutorial.
+### Development Workflow
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Create a local env setting (using the QA settings)
 
-## Deploy on Vercel
+```sh
+cp qa.env .env.local
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_source=github.com&utm_medium=referral&utm_campaign=turborepo-readme) from the creators of Next.js.
+Start a live-reload development server:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```sh
+pnpm run dev
+```
+
+Generate a prod build:
+
+```sh
+pnpm run build
+```
+
+This repository is using Github Actions to deploy to proper environements. In order to deploy to QA
+you can force push to the origin `qa` branch. For production release, just merge to `main` branch.
+
+### Files/Folders structures
+
+This project is running with NextJS so it follows the framework directives (`/app` `/public`
+folders). For the rest all files are under `/src`.
+
+Here is the complete structure:
+
+```
+.
+├── .github/
+├── node_modules/
+├── build/                     # Build Folders for serverless config files
+│ ├── production/              # Production Env config files (.env)
+│ ├── qa/                      # QA Env config files (.env)
+├── app/                       # Routes folder for NextJS v14
+├── public/                    # Public assets
+│ ├── img/                     # img assets
+├── src/                       # Source files
+│ ├── components/              # React Compoments
+│ ├── context/                 # React Contexts
+│ ├── locale/                  # Locale wording
+│ ├── atoms/                   # Jotai stuffs (use Ducks patern)
+│ ├── styles/                  # Global styling and pkgs styling imports
+│ ├── lib/                     # Apply Styled-components and other libraries
+│ └── utils/                   # Constants, Pkgs clients init, tools and utils
+├── .eslintrc.js
+├── .eslintignore
+├── .firebaserc
+├── .gitignore
+├── .prettierignore
+├── .prettierrc
+├── firebase.json
+├── jsconfig.json
+├── next-config.js
+├── package.json
+├── package-lock.json
+└── README.md
+```
+
+### Tools and scripts
+
+The project is using `husky` and `lint-staged` with which are configure to run on git pre-commit
+hooks. During this phase the code is going to be checked with Eslint and Prettier and
+auto-formated/fixed when possible. A Code Checker Github action is set with the same settings and
+will be executed on every Pull Request creation.
+
+Validate Javascript files with Eslint:
+
+```sh
+pnpm run jsLint
+```
+
+Validate CSS and Styled Component code with StyleLint:
+
+```sh
+pnpm run cssLint
+```

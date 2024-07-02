@@ -1,14 +1,16 @@
-"use client";
+'use client';
 
-import { Button } from "@repo/ui";
+import { Router } from 'next/router';
+import NProgress from 'nprogress';
 
-import styles from "../styles/index.module.css";
+import Landing from 'src/components/Landing';
 
-export default function Web() {
-  return (
-    <div className={styles.container}>
-      <h1>Web</h1>
-      <Button onClick={() => console.log("Pressed!")} text="Boop" />
-    </div>
-  );
-}
+Router.events.on('routeChangeStart', () => NProgress.start());
+Router.events.on('routeChangeComplete', () => NProgress.done());
+Router.events.on('routeChangeError', () => NProgress.done());
+
+const Home = () => {
+  return <Landing />;
+};
+
+export default Home;
