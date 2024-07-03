@@ -21,7 +21,7 @@
     "eslint-check": "eslint --print-config . | eslint-config-prettier-check",
     "deploy-serverless": "serverless",
     "pre-commit": "tsc -p tsconfig.json --noEmit && lint-staged",
-    "prepare": "cd ../../ && husky install apps/.husky",
+    "prepare": "cd ../../ && husky .husky",
     "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
