@@ -20,8 +20,8 @@
     "format": "prettier-eslint --write $PWD/'src/**/*.[jt]s?(x)' && eslint --fix .",
     "eslint-check": "eslint --print-config . | eslint-config-prettier-check",
     "deploy-serverless": "serverless",
-    "prepare": "husky install",
     "pre-commit": "tsc -p tsconfig.json --noEmit && lint-staged",
+    "prepare": "cd ../../ && husky install app/.husky",
     "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {

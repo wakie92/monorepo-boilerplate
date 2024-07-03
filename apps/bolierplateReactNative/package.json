@@ -13,8 +13,8 @@
     "lint": "./node_modules/.bin/eslint --fix ./",
     "eslint-check": "eslint --print-config . | eslint-config-prettier-check",
     "pre-commit": "tsc -p tsconfig.json --noEmit && lint-staged",
-    "prepare": "husky install",
-    "postinstall": "rndebugger-open",
+    "postinstall": "rndebugger-open ",
+    "prepare": " cd ../../ && husky install app/.husky",
     "start": "react-native start",
     "test": "jest"
   },
