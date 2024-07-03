@@ -1,6 +1,8 @@
 {
-  "*.{js,css,json,md,ts,tsx}": "prettier --write",
-  "*.{js,ts,tsx}": "eslint --fix",
-  "./src/**/styled.{ts,js}": "stylelint",
-  "./src/styles/styledComponents/**/*.ts": "stylelint"
+  "**/*.{js,css,json,md,ts,tsx}": "prettier --write",
+  "*.{js,ts,tsx}": "eslint --fix --cache",
+  "apps/web/src/**/styled.{ts,js}": "stylelint",
+  "apps/web/src/styles/styledComponents/**/*.ts": "stylelint",
+  "apps/boilerplateReactNative/src/**/styled.{ts,js}": "stylelint",
+  "apps/boilerplateReactNative/src/styles/styledComponents/**/*.ts": "stylelint"
 }

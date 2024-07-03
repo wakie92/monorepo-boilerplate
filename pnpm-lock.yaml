@@ -8,12 +8,33 @@ importers:
 
   .:
     devDependencies:
+      '@typescript-eslint/eslint-plugin':
+        specifier: 5.59.6
+        version: 5.59.6(@typescript-eslint/parser@5.59.6)(eslint@8.41.0)(typescript@5.5.3)
+      '@typescript-eslint/parser':
+        specifier: 5.59.6
+        version: 5.59.6(eslint@8.41.0)(typescript@5.5.3)
+      eslint:
+        specifier: 8.41.0
+        version: 8.41.0
+      husky:
+        specifier: ^9.0.11
+        version: 9.0.11
+      lint-staged:
+        specifier: ^15.2.2
+        version: 15.2.7
       prettier:
         specifier: ^3.1.1
         version: 3.3.2
+      stylelint:
+        specifier: ^16.5.0
+        version: 16.6.1(typescript@5.5.3)
       turbo:
         specifier: ^2.0.5
         version: 2.0.5
+      typescript:
+        specifier: ^5.4.5
+        version: 5.5.3
 
   apps/bolierplateReactNative:
     dependencies:
@@ -428,24 +449,6 @@ importers:
         specifier: ^5.4.5
         version: 5.5.3
 
-  packages/core:
-    devDependencies:
-      '@repo/typescript-config':
-        specifier: workspace:*
-        version: link:../typescript-config
-      '@types/lodash-es':
-        specifier: ^4.17.12
-        version: 4.17.12
-      dayjs:
-        specifier: ^1.11.11
-        version: 1.11.11
-      lodash-es:
-        specifier: ^4.17.21
-        version: 4.17.21
-      typescript:
-        specifier: ^5.4.5
-        version: 5.5.3
-
   packages/typescript-config: {}
 
   packages/ui:
@@ -468,7 +471,7 @@ importers:
         version: 0.73.0(@babel/core@7.24.7)(@babel/preset-env@7.24.7)(react@18.3.1)
       tsup:
         specifier: ^8.0.1
-        version: 8.1.0(typescript@5.5.2)
+        version: 8.1.0(postcss@8.4.39)(typescript@5.5.2)
       typescript:
         specifier: ^5.3.3
         version: 5.5.2
@@ -4701,6 +4704,7 @@ packages:
     resolution: {integrity: sha512-0NgftHUcV4v34VhXm8QBSftKVXtbkBG3ViCjs6+eJ5a6y6Mi/jiFGPc1sC7QK+9BFhWrURE3EOggmWaSxL9OzQ==}
     dependencies:
       '@types/lodash': 4.17.6
+    dev: false
 
   /@types/lodash@4.17.6:
     resolution: {integrity: sha512-OpXEVoCKSS3lQqjx9GGGOapBeuW5eUboYHRlHP9urXPX25IKZ6AnP5ZRxtVf63iieUbsHxLn8NQ5Nlftc6yzAA==}
@@ -9771,6 +9775,7 @@ packages:
 
   /lodash-es@4.17.21:
     resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
+    dev: false
 
   /lodash.camelcase@4.3.0:
     resolution: {integrity: sha512-TwuEnCnxbc3rAvhf/LbG7tJUDzhqXyFnv3dtzLOPgCG/hODL7WFnsbwktkD7yUV0RrreP/l1PALq/YSg6VvjlA==}
@@ -11123,7 +11128,7 @@ packages:
       - supports-color
     dev: true
 
-  /postcss-load-config@4.0.2:
+  /postcss-load-config@4.0.2(postcss@8.4.39):
     resolution: {integrity: sha512-bSVhyJGL00wMVoPUzAVAnbEoWyqRxkjv64tUl427SKnPrENtq6hJwUojroMz2VB+Q1edmi4IfrAPpami5VVgMQ==}
     engines: {node: '>= 14'}
     peerDependencies:
@@ -11136,6 +11141,7 @@ packages:
         optional: true
     dependencies:
       lilconfig: 3.1.2
+      postcss: 8.4.39
       yaml: 2.4.5
     dev: true
 
@@ -13237,7 +13243,7 @@ packages:
   /tslib@2.6.3:
     resolution: {integrity: sha512-xNvxJEOUiWPGhUuUdQgAJPKOOJfGnIyKySOc09XkKsgdUV/3E2zvwZYdejjmRgPCgcym1juLH3226yA7sEFJKQ==}
 
-  /tsup@8.1.0(typescript@5.5.2):
+  /tsup@8.1.0(postcss@8.4.39)(typescript@5.5.2):
     resolution: {integrity: sha512-UFdfCAXukax+U6KzeTNO2kAARHcWxmKsnvSPXUcfA1D+kU05XDccCrkffCQpFaWDsZfV0jMyTsxU39VfCp6EOg==}
     engines: {node: '>=18'}
     hasBin: true
@@ -13264,7 +13270,8 @@ packages:
       execa: 5.1.1
       globby: 11.1.0
       joycon: 3.1.1
-      postcss-load-config: 4.0.2
+      postcss: 8.4.39
+      postcss-load-config: 4.0.2(postcss@8.4.39)
       resolve-from: 5.0.0
       rollup: 4.18.0
       source-map: 0.8.0-beta.0
