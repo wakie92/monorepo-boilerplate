@@ -1,0 +1,29 @@
+{
+  "name": "@repo/core",
+  "type": "module",
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc"
+  },
+  "exports": {
+    "./browserClient": {
+      "types": "./src/browserClient.ts",
+      "default": "./dist/browserClient.js"
+    },
+    "./stringFormatter": {
+      "types": "./src/stringFormatter.ts",
+      "default": "./dist/stringFormatter.js"
+    },
+    "./validation": {
+      "types": "./src/validation.ts",
+      "default": "./dist/validation.js"
+    }
+  },
+  "devDependencies": {
+    "@types/lodash-es": "^4.17.12",
+    "@repo/typescript-config": "workspace:*",
+    "dayjs": "^1.11.11",
+    "lodash-es": "^4.17.21",
+    "typescript": "^5.4.5"
+  }
+}
