@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# 커밋 가능한 디렉토리
+ALLOWED_DIRECTORY="apps"
+
+# 스테이지된 파일 목록
+CURRENT_DIRECTORY=$(pwd)
+
+echo "CURRENT_DIRECTORY: $CURRENT_DIRECTORY"
+
+# 현재 디렉토리가 커밋 가능한 디렉토리인지 확인
+if [[ $CURRENT_DIRECTORY != *"$ALLOWED_DIRECTORY"* ]]; then
+  echo "Error: 커밋은 $ALLOWED_DIRECTORY 디렉토리 내에서만 가능합니다."
+  exit 1
+fi

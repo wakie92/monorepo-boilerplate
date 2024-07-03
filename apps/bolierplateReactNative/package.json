@@ -14,7 +14,7 @@
     "eslint-check": "eslint --print-config . | eslint-config-prettier-check",
     "pre-commit": "tsc -p tsconfig.json --noEmit && lint-staged",
     "postinstall": "rndebugger-open ",
-    "prepare": " cd ../../ && husky install apps/.husky",
+    "prepare": " cd ../../ && husky .husky",
     "start": "react-native start",
     "test": "jest"
   },
