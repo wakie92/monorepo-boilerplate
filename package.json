@@ -6,7 +6,7 @@
     "clean": "turbo run clean && rm -rf node_modules",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\" --ignore-path .gitignore",
     "prepare": "husky",
-    "test": ".husky/pre-commit"
+    "pre-commit": "lint-staged"
   },
   "devDependencies": {
     "prettier": "^3.1.1",
