@@ -7,4 +7,5 @@ out/
 .serverless_nextjs/**
 *.serverless/**
 package-lock.json
+.github/
 
