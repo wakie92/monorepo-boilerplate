@@ -1,0 +1,36 @@
+{
+  "name": "@repo/eslint-config",
+  "version": "0.0.0",
+  "private": true,
+  "files": [
+    "next.js",
+    "react-internal.js",
+    "reactNative.js"
+  ],
+  "devDependencies": {
+    "@next/eslint-plugin-next": "^14.2.3",
+    "@react-native/eslint-config": "0.74.84",
+    "@vercel/style-guide": "^5.2.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "17.0.0",
+    "eslint-config-turbo": "^2.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-only-warn": "^1.1.0",
+    "@typescript-eslint/parser": "^7.1.0",
+    "@typescript-eslint/eslint-plugin": "^7.1.0",
+    "typescript": "^5.3.3",
+    "eslint-import-resolver-alias": "1.1.2",
+    "eslint-import-resolver-typescript": "3.5.5",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-jsx-a11y": "6.7.1",
+    "eslint-plugin-lodash-fp": "2.2.0-a1",
+    "eslint-plugin-no-secrets": "0.8.9",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-react": "7.32.2",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "eslint-plugin-security": "1.7.1",
+    "prettier": "2.8.8",
+    "prettier-eslint": "15.0.1",
+    "prettier-eslint-cli": "7.1.0"
+  }
+}

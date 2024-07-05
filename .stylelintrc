@@ -2,9 +2,10 @@
   "extends": [
     "stylelint-config-standard",
     "stylelint-config-styled-components",
+    "stylelint-config-standard-scss",
     "stylelint-config-recommended"
   ],
-  "syntax": "scss",
+  "customSyntax": "postcss-lit",
   "rules": {
     "at-rule-empty-line-before": ["always", { "except": ["after-same-name", "first-nested"] }],
     "declaration-colon-newline-after": null,
@@ -12,16 +13,7 @@
     "function-name-case": null,
     "indentation": null,
     "no-eol-whitespace": null,
-    "selector-type-case": null,
-    "selector-type-no-unknown": null,
     "value-keyword-case": null,
-    "value-list-comma-newline-after": null,
-    "font-family-no-missing-generic-family-keyword": null,
-    "property-no-unknown": [
-      true,
-      {
-        "ignoreProperties": ["tint-color"]
-      }
-    ]
+    "value-list-comma-newline-after": null
   }
 }

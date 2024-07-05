@@ -20,6 +20,7 @@ export const UiUxContext = createContext<State>({
   widthScreen: 1920,
   uiTheme: 'dark',
   updateDimensions: () => {},
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   updateUiTheme: (newTheme: string) => {},
 });
 
