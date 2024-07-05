@@ -5,7 +5,6 @@
     "build": "turbo run build",
     "clean": "turbo run clean && rm -rf node_modules",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\" --ignore-path .gitignore",
-    "install:web": "pnpm install --workspace-root=web",
     "lint": "turbo lint"
   },
   "devDependencies": {
