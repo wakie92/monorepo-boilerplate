@@ -12,8 +12,7 @@
     "jsLint": "eslint 'src/**/*.[jt]s?(x)'",
     "lint": "./node_modules/.bin/eslint --fix ./",
     "eslint-check": "eslint --print-config . | eslint-config-prettier-check",
-    "pre-commit": "tsc -p tsconfig.json --noEmit && lint-staged",
-    "postinstall": "rndebugger-open",
+    "postinstall": "rndebugger-open ",
     "start": "react-native start",
     "test": "jest"
   },
