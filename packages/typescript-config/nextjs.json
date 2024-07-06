@@ -21,7 +21,9 @@
       "src/locale/*": ["src/locale/*"],
       "src/styles/*": ["src/styles/*"],
       "src/utils/*": ["src/utils/*"],
-      "src/types/*": ["src/types/*"]
+      "src/types/*": ["src/types/*"],
+      "src/lib/*": ["src/lib/*"],
+      "src/components/*": ["src/components/*"]
     },
     "typeRoots": ["./node_modules/@types", "src/types"],
     "jsx": "preserve",

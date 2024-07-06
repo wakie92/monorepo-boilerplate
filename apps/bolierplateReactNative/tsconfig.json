@@ -4,6 +4,7 @@
     "typeRoots": ["./node_modules/@types", "./src/types"],
     "types": ["styled-components-react-native", "node"]
   },
-  "include": ["**/*.ts", "**/*.tsx"],
+  "include": ["**/*.ts", "**/*.tsx", ".eslintrc.js"],
+
   "exclude": ["node_modules"]
 }
