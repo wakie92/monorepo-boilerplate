@@ -1,33 +1,9 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "React Native Library",
+  "extends": "./base.json",
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": false,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "baseUrl": ".",
-    "paths": {
-      "src/redux/modules/*": ["src/redux/modules/*"],
-      "src/contexts/*": ["src/contexts/*"],
-      "src/locale/*": ["src/locale/*"],
-      "src/styles/*": ["src/styles/*"],
-      "src/utils/*": ["src/utils/*"],
-      "src/types/*": ["src/types/*"]
-    },
-    "jsx": "preserve",
-    "incremental": true,
-    "strictNullChecks": true
+    "jsx": "react-native"
   },
-  "include": ["**/*.ts", "**/*.tsx", "index.js"],
-  "exclude": ["node_modules", "babel.config.js", "metro.config.js"],
-  "extends": "@react-native/typescript-config/tsconfig.json"
+  "exclude": ["node_modules"]
 }
