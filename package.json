@@ -6,9 +6,16 @@
     "clean": "turbo run clean && rm -rf node_modules",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\" --ignore-path .gitignore",
     "prepare": "husky",
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged",
+    "tscheck:web": "tsc -p apps/web/tsconfig.json --noEmit",
+    "tscheck:packages-core": "tsc -p packages/core/tsconfig.json --noEmit",
+    "tscheck:native": "tsc -p apps/native/tsconfig.json --noEmit",
+    "eslint-check:web": "cd apps/web && eslint 'src/**/*.[jt]s?(x)' --fix --cache",
+    "eslint-check:native": "cd apps/native && eslint 'src/**/*.[jt]s?(x)' --fix --cache",
+    "eslint-check:packages-core": "cd packages/core && eslint 'src/**/*.[jt]s?(x)' --fix --cache"
   },
   "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
     "prettier": "^3.1.1",
     "turbo": "^2.0.5",
     "stylelint-config-recommended": "^14.0.0",
