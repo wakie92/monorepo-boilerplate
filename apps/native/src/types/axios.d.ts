@@ -19,7 +19,7 @@ declare module 'axios' {
     (url: string, config?: AxiosRequestConfig): AxiosPromise;
     interceptors: {
       request: AxiosInterceptorManager<AxiosRequestConfig>;
-      response: AxiosInterceptorManager<AxiosResponse<any>>;
+      response: AxiosInterceptorManager<AxiosResponse<unknown>>;
     };
   }
 
