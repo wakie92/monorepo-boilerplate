@@ -4,7 +4,7 @@
   "private": true,
   "files": [
     "next.js",
-    "react-internal.js",
+    "base.js",
     "reactNative.js"
   ],
   "devDependencies": {
