@@ -1,7 +1,3 @@
-const { resolve } = require('node:path');
-
-const project = resolve(process.cwd(), 'tsconfig.json');
-
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
   env: {
@@ -27,6 +23,12 @@ module.exports = {
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
+  },
+  parserOptions: {
+    project: 'tsconfig.json',
+    createDefaultProgram: true,
+    ecmaVersion: 2018,
+    sourceType: 'module',
   },
   plugins: [
     'import',
@@ -75,6 +77,5 @@ module.exports = {
       '@typescript-eslint/parser': ['.ts', '.tsx'],
     },
     'import/resolver': { node: { paths: ['.'] }, typescript: {} },
-    'import/ignore': ['react-native'],
   },
 };
