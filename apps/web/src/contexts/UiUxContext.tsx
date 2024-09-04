@@ -1,8 +1,8 @@
 import React, { createContext, useEffect, useState } from 'react';
 import localforage from 'localforage';
+import { getBrowserDocument, getBrowserWindow } from '@repo/core';
 
 import { dark, supportedUIthemes } from 'src/styles/theme';
-import { getBrowserWindow, getBrowserDocument } from 'src/utils/browserClient';
 
 export type State = {
   devicePixelRatio: number;

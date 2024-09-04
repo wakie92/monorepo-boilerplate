@@ -61,6 +61,25 @@ module.exports = {
         ignorePropertyModificationsFor: ['draft', 'stateValidate', 'state'],
       },
     ],
+    'import/order': [
+      'error',
+      {
+        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'object', 'type'],
+        pathGroups: [
+          {
+            pattern: 'src/**',
+            group: 'external',
+            position: 'after',
+          },
+        ],
+        pathGroupsExcludedImportTypes: ['react', 'next*.**'],
+        alphabetize: {
+          // order: 'asc',
+          caseInsensitive: true,
+        },
+        'newlines-between': 'always',
+      },
+    ],
     'no-secrets/no-secrets': 'error',
     'no-underscore-dangle': ['error', { allow: ['__REDUX_DEVTOOLS_EXTENSION__'] }],
     'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
