@@ -1,35 +1,29 @@
 {
   "name": "@repo/core",
-  "type": "commonjs",
+  "version": "0.0.0",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist/**"
+  ],
   "scripts": {
-    "dev": "tsc --watch",
-    "build": "tsc"
-  },
-  "exports": {
-    "./browserClient": {
-      "types": "./src/browserClient.ts",
-      "default": "./dist/browserClient.js"
-    },
-    "./stringFormatter": {
-      "types": "./src/stringFormatter.ts",
-      "default": "./dist/stringFormatter.js"
-    },
-    "./validation": {
-      "types": "./src/validation.ts",
-      "default": "./dist/validation.js"
-    }
+    "dev": "tsup --watch",
+    "build": "tsup"
   },
   "dependencies": {
+    "dayjs": "^1.11.11",
     "lodash-es": "^4.17.21",
-    "dayjs": "^1.11.11"
+    "tsup": "^8.2.4"
   },
   "devDependencies": {
-    "@types/lodash-es": "^4.17.12",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "typescript": "^5.4.5",
-    "eslint": "^8.56.0",
+    "@types/lodash-es": "^4.17.12",
     "@typescript-eslint/eslint-plugin": "^7.1.0",
-    "@typescript-eslint/parser": "^7.1.0"
+    "@typescript-eslint/parser": "^7.1.0",
+    "eslint": "^8.56.0",
+    "typescript": "^5.4.5"
   }
 }
