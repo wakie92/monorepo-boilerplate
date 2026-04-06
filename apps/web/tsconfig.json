@@ -1,19 +1,16 @@
 {
-  "extends": "@repo/typescript-config/nextjs.json",
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "baseUrl": ".",
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "ESNext",
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [{ "name": "next" }],
     "paths": {
-      "src/redux/modules/*": ["src/redux/modules/*"],
-      "src/contexts/*": ["src/contexts/*"],
-      "src/locale/*": ["src/locale/*"],
-      "src/styles/*": ["src/styles/*"],
-      "src/utils/*": ["src/utils/*"],
-      "src/types/*": ["src/types/*"],
-      "src/lib/*": ["src/lib/*"],
-      "src/components/*": ["src/components/*"]
-    },
-    "typeRoots": ["./node_modules/@types", "src/types"]
+      "@/*": ["./src/*"]
+    }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", ".eslintrc.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }

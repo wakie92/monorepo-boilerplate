@@ -1,3 +1,12 @@
 {
-  "extends": "@repo/typescript-config/base.json"
+  "compilerOptions": {
+    "strict": true,
+    "strictNullChecks": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true
+  }
 }
