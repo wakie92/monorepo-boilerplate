@@ -1,0 +1,19 @@
+{
+  "extends": [
+    "@repo/typescript-config/reactNative.json",
+    "@react-native/typescript-config/tsconfig.json"
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "src/redux/modules/*": ["src/redux/modules/*"],
+      "src/contexts/*": ["src/contexts/*"],
+      "src/locale/*": ["src/locale/*"],
+      "src/styles/*": ["src/styles/*"],
+      "src/utils/*": ["src/utils/*"],
+      "src/types/*": ["src/types/*"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.tsx", "index.js", ".eslintrc.js"],
+  "exclude": ["node_modules", "babel.config.js", "metro.config.js"]
+}

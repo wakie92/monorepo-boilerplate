@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {
+      "src/redux/modules/*": ["src/redux/modules/*"],
+      "src/contexts/*": ["src/contexts/*"],
+      "src/locale/*": ["src/locale/*"],
+      "src/styles/*": ["src/styles/*"],
+      "src/utils/*": ["src/utils/*"]
+    }
+  }
+}
