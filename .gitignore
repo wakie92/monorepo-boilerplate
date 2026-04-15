@@ -1,6 +1,8 @@
 node_modules
 .turbo
 .claude/settings.local.json
+.omc/project-memory.json
+.omc
 .env
 .env.local
 .env.*.local

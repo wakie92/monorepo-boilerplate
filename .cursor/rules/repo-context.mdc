@@ -1,0 +1,16 @@
+---
+description: fe-monorepo 맥락 — CLAUDE.md·.claude 문서 참조
+alwaysApply: true
+---
+
+# 이 저장소
+
+- **요약**: 루트 `CLAUDE.md`를 먼저 읽습니다.
+- **웹 앱 구조**: `.claude/architecture.md`
+- **UI·스타일**: `.claude/styling.md`
+- **커밋 메시지**: `.cursor/rules/commit-convention.mdc` + `commitlint.config.js`
+
+## 도구
+
+- 패키지: `pnpm` (워크스페이스). 검증: `pnpm lint`, `pnpm type-check`.
+- ESLint는 앱별 `eslint.config.mjs`와 루트 `eslint.config.packages.mjs`(패키지·공통 스크립트)를 씁니다. Cursor/VS Code는 `eslint.workingDirectories: auto`로 맞춰 두었습니다.

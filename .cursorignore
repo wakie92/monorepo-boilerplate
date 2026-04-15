@@ -1,0 +1,13 @@
+node_modules
+.turbo
+.pnpm-store
+.next
+.expo
+dist
+build
+**/.next/**
+**/.expo/**
+**/.turbo/**
+**/.omc/**
+.claude/worktrees
+.claude/scheduled_tasks.lock

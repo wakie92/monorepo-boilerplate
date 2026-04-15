@@ -17,7 +17,8 @@ alwaysApply: true
 **규칙 요약**
 
 - `subject-case`: **sentence-case**
-- `subject-max-length`: **72**
-- `body-max-line-length`: **100**
+- `header-max-length`: **100** (첫 줄 전체: `type(scope): subject`)
+- `subject-max-length`: **100** (콜론 뒤 설명; header 100자와 함께 만족해야 함)
+- `body-max-line-length`: **100** (본문 한 줄)
 
 커밋 전 로컬에서 맞는지 확인하려면: `echo "feat(web): Add example" | pnpm exec commitlint`
