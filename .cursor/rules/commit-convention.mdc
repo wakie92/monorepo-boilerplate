@@ -1,0 +1,23 @@
+---
+description: Conventional Commits — commitlint와 동일한 커밋 메시지 규칙
+alwaysApply: true
+---
+
+# 커밋 메시지
+
+- 설정 파일: `commitlint.config.js` (extends `@commitlint/config-conventional` + 커스텀 규칙)
+- Husky: `.husky/commit-msg`에서 `pnpm commitlint --edit` 실행
+
+## 형식
+
+`<type>(<scope>): <subject>` — scope 생략 가능.
+
+**type** (고정 목록): `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`, `perf`, `ci`, `revert`
+
+**규칙 요약**
+
+- `subject-case`: **sentence-case**
+- `subject-max-length`: **72**
+- `body-max-line-length`: **100**
+
+커밋 전 로컬에서 맞는지 확인하려면: `echo "feat(web): Add example" | pnpm exec commitlint`

@@ -12,20 +12,43 @@
     "prepare": "husky"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "3.3.5",
+    "@repo/eslint-config": "workspace:*",
     "@repo/prettier-config": "workspace:*",
-    "@types/node": "^22.10.7",
-    "@commitlint/cli": "^19.6.1",
-    "@commitlint/config-conventional": "^19.6.0",
-    "husky": "^9.1.7",
-    "lint-staged": "^15.3.0",
-    "prettier": "^3.4.2",
-    "prettier-plugin-tailwindcss": "^0.6.11",
-    "turbo": "^2.3.3",
-    "typescript": "^5.7.3"
+    "@types/node": "22.19.17",
+    "@commitlint/cli": "19.8.1",
+    "@commitlint/config-conventional": "19.8.1",
+    "husky": "9.1.7",
+    "eslint": "9.39.4",
+    "eslint-config-next": "15.5.15",
+    "lint-staged": "15.5.2",
+    "prettier": "3.8.3",
+    "prettier-plugin-tailwindcss": "0.6.14",
+    "turbo": "2.9.6",
+    "typescript": "5.9.3"
   },
   "lint-staged": {
-    "**/*.{ts,tsx,js,jsx}": [
-      "eslint --fix --max-warnings 0",
+    "apps/web/**/*.{ts,tsx,js,jsx,mjs}": [
+      "eslint --fix --max-warnings 0 --no-warn-ignored --config apps/web/eslint.config.mjs",
+      "prettier --write"
+    ],
+    "apps/mobile/**/*.{ts,tsx,js,jsx}": [
+      "eslint --fix --max-warnings 0 --no-warn-ignored --config apps/mobile/eslint.config.mjs",
+      "prettier --write"
+    ],
+    "packages/**/*.{ts,tsx,js,jsx,mjs,cjs}": [
+      "eslint --fix --max-warnings 0 --no-warn-ignored --config eslint.config.packages.mjs",
+      "prettier --write"
+    ],
+    "commitlint.config.js": [
+      "eslint --fix --max-warnings 0 --no-warn-ignored --config eslint.config.packages.mjs",
+      "prettier --write"
+    ],
+    "eslint.config.packages.mjs": [
+      "eslint --fix --max-warnings 0 --no-warn-ignored --config eslint.config.packages.mjs",
+      "prettier --write"
+    ],
+    "repo.d.ts": [
       "prettier --write"
     ],
     "**/*.{json,css,md}": [

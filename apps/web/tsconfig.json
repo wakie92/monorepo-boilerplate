@@ -1,12 +1,7 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "@repo/tsconfig/nextjs.json",
   "compilerOptions": {
-    "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "module": "ESNext",
-    "jsx": "preserve",
-    "incremental": true,
-    "plugins": [{ "name": "next" }],
+    "allowJs": true,
     "paths": {
       "@/*": ["./src/*"]
     }
