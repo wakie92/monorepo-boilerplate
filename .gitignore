@@ -1,9 +1,10 @@
 node_modules
 .turbo
+.claude/settings.local.json
 .env
 .env.local
 .env.*.local
-
+.pnpm-store
 # Next.js
 apps/web/.next
 apps/web/out

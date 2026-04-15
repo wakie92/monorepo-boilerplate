@@ -1,12 +1,5 @@
 {
-  "compilerOptions": {
-    "strict": true,
-    "strictNullChecks": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true
-  }
+  "extends": "./packages/tsconfig/base.json",
+  "include": ["repo.d.ts"],
+  "exclude": ["node_modules", "apps", "packages"]
 }
