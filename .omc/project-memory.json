@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1776237258741,
+  "lastScanned": 1776494749927,
   "projectRoot": "/Users/ichanghun/Workspace/fe-monorepo",
   "techStack": {
     "languages": [
@@ -62,88 +62,58 @@
       "path": "apps",
       "purpose": null,
       "fileCount": 0,
-      "lastAccessed": 1776237258702,
+      "lastAccessed": 1776494749886,
       "keyFiles": []
     },
     "packages": {
       "path": "packages",
       "purpose": null,
       "fileCount": 0,
-      "lastAccessed": 1776237258703,
+      "lastAccessed": 1776494749886,
       "keyFiles": []
     }
   },
   "hotPaths": [
     {
-      "path": "CLAUDE.md",
-      "accessCount": 13,
-      "lastAccessed": 1776246097386,
+      "path": "README.md",
+      "accessCount": 2,
+      "lastAccessed": 1776400735057,
       "type": "file"
     },
     {
-      "path": "",
-      "accessCount": 4,
-      "lastAccessed": 1776244861694,
-      "type": "directory"
+      "path": "CLAUDE.md",
+      "accessCount": 2,
+      "lastAccessed": 1776494935099,
+      "type": "file"
     },
     {
       "path": ".claude/architecture.md",
-      "accessCount": 3,
-      "lastAccessed": 1776246200677,
-      "type": "file"
-    },
-    {
-      "path": "packages",
       "accessCount": 1,
-      "lastAccessed": 1776244744113,
-      "type": "directory"
-    },
-    {
-      "path": "packages/prettier-config/index.js",
-      "accessCount": 1,
-      "lastAccessed": 1776244747493,
-      "type": "file"
-    },
-    {
-      "path": "packages/prettier-config/package.json",
-      "accessCount": 1,
-      "lastAccessed": 1776244747564,
-      "type": "file"
-    },
-    {
-      "path": "package.json",
-      "accessCount": 1,
-      "lastAccessed": 1776244757819,
-      "type": "directory"
-    },
-    {
-      "path": "apps/web/package.json",
-      "accessCount": 1,
-      "lastAccessed": 1776244859684,
-      "type": "file"
-    },
-    {
-      "path": "apps/web/src/lib/utils.ts",
-      "accessCount": 1,
-      "lastAccessed": 1776244865764,
+      "lastAccessed": 1776400718984,
       "type": "file"
     },
     {
       "path": ".claude/styling.md",
       "accessCount": 1,
-      "lastAccessed": 1776246085435,
-      "type": "file"
-    },
-    {
-      "path": ".claude/agents/code-cleaner.md",
-      "accessCount": 1,
-      "lastAccessed": 1776246813761,
+      "lastAccessed": 1776400719150,
       "type": "file"
     },
     {
       "path": ".claude/agents/commit.md",
       "accessCount": 1,
-      "lastAccessed": 1776246922862,
+      "lastAccessed": 1776494858706,
+      "type": "file"
+    },
+    {
+      "path": ".claude/agents/code-cleaner.md",
+      "accessCount": 1,
+      "lastAccessed": 1776494858765,
+      "type": "file"
+    },
+    {
+      "path": ".claude/agents/senior-dev.md",
+      "accessCount": 1,
+      "lastAccessed": 1776494890517,
       "type": "file"
     }
   ],
