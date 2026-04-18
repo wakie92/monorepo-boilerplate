@@ -3,10 +3,12 @@ node_modules
 .claude/settings.local.json
 .omc/project-memory.json
 .omc
-.env
+.envㅁ
 .env.local
 .env.*.local
 .pnpm-store
+.claude/worktrees
+
 # Next.js
 apps/web/.next
 apps/web/out
