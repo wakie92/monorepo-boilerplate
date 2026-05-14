@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1776494749927,
-  "projectRoot": "/Users/ichanghun/Workspace/fe-monorepo",
+  "lastScanned": 1778730121582,
+  "projectRoot": "/Users/changhunlee/Workspace/monorepo-boilerplate",
   "techStack": {
     "languages": [
       {
@@ -62,18 +62,24 @@
       "path": "apps",
       "purpose": null,
       "fileCount": 0,
-      "lastAccessed": 1776494749886,
+      "lastAccessed": 1778730121469,
       "keyFiles": []
     },
     "packages": {
       "path": "packages",
       "purpose": null,
       "fileCount": 0,
-      "lastAccessed": 1776494749886,
+      "lastAccessed": 1778730121473,
       "keyFiles": []
     }
   },
   "hotPaths": [
+    {
+      "path": ".claude/architecture.md",
+      "accessCount": 4,
+      "lastAccessed": 1778731339484,
+      "type": "file"
+    },
     {
       "path": "README.md",
       "accessCount": 2,
@@ -84,12 +90,6 @@
       "path": "CLAUDE.md",
       "accessCount": 2,
       "lastAccessed": 1776494935099,
-      "type": "file"
-    },
-    {
-      "path": ".claude/architecture.md",
-      "accessCount": 1,
-      "lastAccessed": 1776400718984,
       "type": "file"
     },
     {
@@ -114,6 +114,12 @@
       "path": ".claude/agents/senior-dev.md",
       "accessCount": 1,
       "lastAccessed": 1776494890517,
+      "type": "file"
+    },
+    {
+      "path": ".claude/streaming-sections.md",
+      "accessCount": 1,
+      "lastAccessed": 1778730740850,
       "type": "file"
     }
   ],
